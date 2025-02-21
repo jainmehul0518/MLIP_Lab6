@@ -15,12 +15,11 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # Activate virtual environment
-                sudo source /home/mehulj2/lab-6/mlip/bin/activate
+                # Fill out the path to conda here
+                # sudo /home/mehulj2/anaconda3/envs/mlip init
 
                 # TODO Complete the command to run pytest
-                sudo cd /home/mehulj2/lab-6/MLIP_Lab6
-                sudo pytest
+                # sudo /home/mehulj2/anaconda3/envs/mlip run -n mlip pytest
 
                 # echo 'pytest not runned'
                 # exit 1 #comment this line after implementing Jenkinsfile
@@ -30,7 +29,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'In this step, we deploy our project'
+                echo 'In this step, we deploy our porject'
                 echo 'Depending on the context, we may publish the project artifact or upload pickle files'
             }
         }
