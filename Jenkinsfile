@@ -16,10 +16,10 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda environment
-                sudo /home/mehulj2/anaconda3/envs/mlip init
+                sudo /home/mehulj2/anaconda3/envs/conda init
 
                 # Run pytest
-                sudo /home/mehulj2/anaconda3/envs/mlip run -n mlip pytest
+                sudo /home/mehulj2/anaconda3/envs/conda run -n mlip pytest
                 '''
 
             }
